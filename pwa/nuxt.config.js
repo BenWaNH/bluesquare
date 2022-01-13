@@ -53,6 +53,9 @@ export default {
     strategies: {
       local: {
         _scheme: 'local',
+        user: {
+          property: ''
+        },
         endpoints: {
           login: {
             url: '/authentication_token',
@@ -86,7 +89,7 @@ export default {
   },
 
   router: {
-    // middleware: ['auth']
+    middleware: ['auth']
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

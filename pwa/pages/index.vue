@@ -44,14 +44,14 @@ export default {
             password: this.$refs.loginForm.password
           }
         })
-        this.$auth.setUser(this.parseJwt(this.$auth.strategy.token.get()))
-        if (!this.$auth.hasScope('ROLE_SUPER_ADMIN')) {
-          this.$auth.logout()
-          // throw new TypeError('Not authorized')
-          this.error = 'Permission denied'
-        } else {
+        // this.$auth.setUser(this.parseJwt(this.$auth.strategy.token.get()))
+        // if (!this.$auth.hasScope('ROLE_SUPER_ADMIN')) {
+        //   this.$auth.logout()
+        //   // throw new TypeError('Not authorized')
+        //   this.error = 'Permission denied'
+        // } else {
           // await this.$router.push('cfas')
-        }
+        // }
       } catch (e) {
         if (e.code === 401) {
           this.error = 'Identifiants invalides'

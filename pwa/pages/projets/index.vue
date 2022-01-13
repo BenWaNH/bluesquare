@@ -20,7 +20,7 @@
         >
           <template v-slot:top>
             <v-toolbar flat>
-              <v-toolbar-title>Utilisateurs</v-toolbar-title>
+              <v-toolbar-title>Projets</v-toolbar-title>
 
               <v-spacer></v-spacer>
 
@@ -81,10 +81,7 @@ export default {
   },
   data: () => ({
     headers: [
-      { text: 'Prénom', value: 'firstName' },
-      { text: 'Nom', value: 'lastName' },
-      { text: 'Email', value: 'email' },
-      { text: 'Rôle', value: 'role' },
+      { text: 'Titre', value: 'title' },
       {
         text: 'Actions',
         value: 'action',
@@ -108,7 +105,7 @@ export default {
     })
   },
   methods: {
-    ...mapActions('user', {
+    ...mapActions('project', {
       fetchAll: 'fetchAll',
       deleteItem: 'del'
     }),
