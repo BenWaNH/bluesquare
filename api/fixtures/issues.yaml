@@ -1,0 +1,7 @@
+App\Entity\Issue:
+    issue_{1..60}:
+        project: '@project_*'
+        title: Ticket \#<current()>
+        type: 'bug'
+        priority: 'normal'
+        createdBy: '@customer_*'

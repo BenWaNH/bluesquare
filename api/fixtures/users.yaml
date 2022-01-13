@@ -1,0 +1,15 @@
+App\Entity\User:
+    dev_{1..20}:
+        active: 1
+        email: dev<current()>\@email.com
+        firstName: <fr_FR:firstName()>
+        lastName: <fr_FR:lastName()>
+        password: <encodePassword(@self, 'test')>
+        role: ROLE_DEV
+    customer_{1..200}:
+        active: 1
+        email: customer<current()>\@email.com
+        firstName: <fr_FR:firstName()>
+        lastName: <fr_FR:lastName()>
+        password: <encodePassword(@self, 'test')>
+        role: ROLE_CUSTOMER
